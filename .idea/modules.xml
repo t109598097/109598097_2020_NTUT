@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/109OrientationCourse_Object-Oriented_Programming.iml" filepath="$PROJECT_DIR$/.idea/modules/109OrientationCourse_Object-Oriented_Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/109OrientationCourse_Object-Oriented_Programming_main.iml" filepath="$PROJECT_DIR$/.idea/modules/109OrientationCourse_Object-Oriented_Programming_main.iml" group="109OrientationCourse_Object-Oriented_Programming" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/109OrientationCourse_Object-Oriented_Programming_test.iml" filepath="$PROJECT_DIR$/.idea/modules/109OrientationCourse_Object-Oriented_Programming_test.iml" group="109OrientationCourse_Object-Oriented_Programming" />
+    </modules>
+  </component>
+</project>
