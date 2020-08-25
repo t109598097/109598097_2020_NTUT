@@ -12,7 +12,7 @@ public class LogicSimulatorTest
     String file1Path;
     String file2Path;
     String file1Data;
-    String file2Data;
+    String wrongData;
 
     @Before
     public void setUp()
@@ -24,7 +24,7 @@ public class LogicSimulatorTest
                     "1 -1 2.1 3.1 0\n" +
                     "3 -2 0\n" +
                     "2 2.1 -3 0";
-        file2Data = "2\n" +
+        wrongData = "2\n" +
                 "3\n" +
                 "1 -1 2.1 3.1 0\n" +
                 "3 -2 0\n" +
@@ -141,8 +141,27 @@ public class LogicSimulatorTest
         assertEquals(true, logicSimulator.detectLcfFormat(lcfStringList));
 
         //wrong
-        lcfStringList = new ArrayList<String>(Arrays.asList(file2Data.split("\\n")));
+        lcfStringList = new ArrayList<String>(Arrays.asList(wrongData.split("\\n")));
 
         assertEquals(false, logicSimulator.detectLcfFormat(lcfStringList));
+    }
+
+    @Test
+    public void testClearSimulator()
+    {
+        LogicSimulator logicSimulator = new LogicSimulator();
+
+        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
+
+        logicSimulator.constructDevice(lcfStringList);
+
+        logicSimulator.connectDevice(lcfStringList);
+
+        logicSimulator.clearSimulator();
+
+        assertEquals(0, logicSimulator.getCircuits().size());
+        assertEquals(0, logicSimulator.getiPins().size());
+        assertEquals(0, logicSimulator.getoPins().size());
+
     }
 }

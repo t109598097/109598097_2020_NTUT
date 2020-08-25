@@ -8,6 +8,8 @@ public class LogicSimulator
     private Vector<Device> iPins;
     private Vector<Device> oPins;
     private List<String> lcfStringList;
+    private Boolean simulatorExist;
+
 
     public LogicSimulator()
     {
@@ -15,6 +17,7 @@ public class LogicSimulator
         iPins = new Vector<>();
         oPins = new Vector<>();
         lcfStringList = new ArrayList<>();
+        simulatorExist = false;
     }
 
     public Vector<Device> getoPins(){
@@ -35,6 +38,11 @@ public class LogicSimulator
         try {
             File lcf = new File(filePath);
             Scanner scanner = new Scanner(lcf);
+
+            if(this.simulatorExist) {
+                clearSimulator();
+            }
+
             while (scanner.hasNextLine()) {
                 this.lcfStringList.add(scanner.nextLine());
             }
@@ -279,6 +287,13 @@ public class LogicSimulator
         return true;
     }
 
+    public void clearSimulator(){
+        this.iPins.clear();
+        this.oPins.clear();
+        this.circuits.clear();
+        this.simulatorExist = false;
+    }
+
     public Boolean isPositiveInteger(String s) {
         try {
             if(Integer.parseInt(s)>0) {
@@ -292,4 +307,6 @@ public class LogicSimulator
             return false;
         }
     }
+
+
 }
