@@ -2,10 +2,7 @@ import org.junit.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Vector;
+import java.util.*;
 
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
@@ -14,15 +11,25 @@ public class LogicSimulatorTest
 {
     String file1Path;
     String file2Path;
-    String file3Path;
-    List<String> LcfString;
+    String file1Data;
 
     @Before
     public void setUp()
     {
         file1Path = "src/File1.lcf";
         file2Path = "src/File2.lcf";
-        file3Path = "";
+        file1Data = "3\n" +
+                    "3\n" +
+                    "1 -1 2.1 3.1 0\n" +
+                    "3 -2 0\n" +
+                    "2 2.1 -3 0";
+    }
+
+    @Test
+    public void testDevicePolymorphism()
+    {
+        LogicSimulator logicSimulator = new LogicSimulator();
+        assertEquals(LogicSimulator.class.getName(), logicSimulator.getClass().getName());
     }
 
     @Test
@@ -31,28 +38,42 @@ public class LogicSimulatorTest
         //file not exist
         LogicSimulator logicSimulator = new LogicSimulator();
 
-        assertEquals(false, logicSimulator.load(file3Path));
+        assertEquals(false, logicSimulator.load(""));
 
         //file exist
         assertEquals(true, logicSimulator.load(file1Path));
     }
 
-    @Test
-    public void testVerifyLcfFormat()
-    {
 
+    @Test
+    public void testConstructDevice()
+    {
+        LogicSimulator logicSimulator = new LogicSimulator();
+
+        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
+
+        logicSimulator.constructDevice(lcfStringList);
+
+        assertEquals(3, logicSimulator.getiPins().size());
+        assertEquals(1, logicSimulator.getoPins().size());
+        assertEquals(3, logicSimulator.getCircuits().size());
     }
 
     @Test
-    public void splitLcfString()
+    public void testConnectDevice()
     {
+        LogicSimulator logicSimulator = new LogicSimulator();
 
-    }
+        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
 
-    @Test
-    public void constructLcf()
-    {
+        logicSimulator.constructDevice(lcfStringList);
 
+        logicSimulator.connectDevice(lcfStringList);
+
+        assertEquals(3, logicSimulator.getCircuits().get(0).iPins.size());
+        assertEquals(1, logicSimulator.getCircuits().get(1).iPins.size());
+        assertEquals(2, logicSimulator.getCircuits().get(2).iPins.size());
+        assertEquals(1, logicSimulator.getoPins().get(0).iPins.size());
     }
 
     @Test
@@ -75,8 +96,23 @@ public class LogicSimulatorTest
     }
 
     @Test
-    public void getTruthTable()
+    public void testGetTruthTable()
     {
+        LogicSimulator logicSimulator = new LogicSimulator();
 
+        logicSimulator.load(file1Path);
+
+        assertEquals("Truth table:\n" +
+                "i i i | o\n" +
+                "1 2 3 | 1\n" +
+                "------+--\n" +
+                "0 0 0 | 0\n" +
+                "0 0 1 | 0\n" +
+                "0 1 0 | 0\n" +
+                "0 1 1 | 0\n" +
+                "1 0 0 | 1\n" +
+                "1 0 1 | 1\n" +
+                "1 1 0 | 0\n" +
+                "1 1 1 | 0\n", logicSimulator.getTruthTable());
     }
 }
