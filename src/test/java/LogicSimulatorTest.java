@@ -195,6 +195,17 @@ public class LogicSimulatorTest
         assertEquals(0, logicSimulator.getCircuits().size());
         assertEquals(0, logicSimulator.getiPins().size());
         assertEquals(0, logicSimulator.getoPins().size());
+    }
 
+    @Test
+    public void testIsPositiveInteger()
+    {
+        LogicSimulator logicSimulator = new LogicSimulator();
+
+        assertEquals(true, logicSimulator.isPositiveInteger("1"));
+        assertEquals(false, logicSimulator.isPositiveInteger("0"));
+        assertEquals(false, logicSimulator.isPositiveInteger("-1"));
+        assertEquals(false, logicSimulator.isPositiveInteger("a"));
+        assertEquals(false, logicSimulator.isPositiveInteger("."));
     }
 }
