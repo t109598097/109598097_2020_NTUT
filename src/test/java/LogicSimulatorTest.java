@@ -12,6 +12,7 @@ public class LogicSimulatorTest
     String file1Path;
     String file2Path;
     String file1Data;
+    String file2Data;
     String wrongData;
 
     @Before
@@ -24,6 +25,13 @@ public class LogicSimulatorTest
                     "1 -1 2.1 3.1 0\n" +
                     "3 -2 0\n" +
                     "2 2.1 -3 0";
+        file2Data = "3\n" +
+                "5\n" +
+                "1 -1 2.1 3.1 0\n" +
+                "3 -2 0\n" +
+                "2 2.1 -3 0\n" +
+                "1 -1 2.1 3.1 0\n" +
+                "3 4.1 0";
         wrongData = "2\n" +
                 "3\n" +
                 "1 -1 2.1 3.1 0\n" +
@@ -110,6 +118,8 @@ public class LogicSimulatorTest
     {
         LogicSimulator logicSimulator = new LogicSimulator();
 
+        //test1
+
         List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
 
         logicSimulator.constructDevice(lcfStringList);
@@ -128,6 +138,29 @@ public class LogicSimulatorTest
                 "1 0 1 | 1\n" +
                 "1 1 0 | 0\n" +
                 "1 1 1 | 0\n", logicSimulator.getTruthTable());
+
+        logicSimulator = new LogicSimulator();
+
+        //test2
+
+        lcfStringList = new ArrayList<String>(Arrays.asList(file2Data.split("\\n")));
+
+        logicSimulator.constructDevice(lcfStringList);
+
+        logicSimulator.connectDevice(lcfStringList);
+
+        assertEquals("Truth table:\n" +
+                "i i i | o o\n" +
+                "1 2 3 | 1 2\n" +
+                "------+----\n" +
+                "0 0 0 | 0 1\n" +
+                "0 0 1 | 0 1\n" +
+                "0 1 0 | 0 1\n" +
+                "0 1 1 | 0 1\n" +
+                "1 0 0 | 1 0\n" +
+                "1 0 1 | 1 0\n" +
+                "1 1 0 | 0 1\n" +
+                "1 1 1 | 0 1\n", logicSimulator.getTruthTable());
     }
 
     @Test

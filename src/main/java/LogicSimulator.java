@@ -104,7 +104,12 @@ public class LogicSimulator
                 stringBuilder.append("i").append("  ");
             }
         }
-        stringBuilder.append("|").append(" ").append("o").append("\n");
+
+        stringBuilder.append("|");
+        for(int i=0; i<this.oPins.size(); i++){
+            stringBuilder.append(" ").append("o");
+        }
+        stringBuilder.append("\n");
 
         for(int i=0; i<size; i++){
             if(i<9){
@@ -113,7 +118,12 @@ public class LogicSimulator
                 stringBuilder.append(i+1).append("  ");
             }
         }
-        stringBuilder.append("|").append(" ").append("1").append("\n");
+
+        stringBuilder.append("|");
+        for(int i=0; i<this.oPins.size(); i++){
+            stringBuilder.append(" ").append(i+1);
+        }
+        stringBuilder.append("\n");
 
         for(int i=0; i<size; i++){
             if(i<9){
@@ -122,7 +132,12 @@ public class LogicSimulator
                 stringBuilder.append("-").append("--");;
             }
         }
-        stringBuilder.append("+").append("-").append("-").append("\n");
+
+        stringBuilder.append("+");
+        for(int i=0; i<this.oPins.size(); i++){
+            stringBuilder.append("-").append("-");
+        }
+        stringBuilder.append("\n");
 
         return stringBuilder;
     }
@@ -141,22 +156,22 @@ public class LogicSimulator
                 stringBuilder.append(inputValues.get(i)?"1":"0").append("  ");;
             }
         }
-        stringBuilder.append("|").append(" ").append(this.oPins.get(0).getOutput()?"1":"0").append("\n");
+
+        stringBuilder.append("|");
+        for(int i=0; i<this.oPins.size(); i++){
+            stringBuilder.append(" ").append(this.oPins.get(i).getOutput()?"1":"0");
+        }
+        stringBuilder.append("\n");
 
         return stringBuilder.toString();
     }
 
     public void constructDevice(List<String> lcfStringList){
         int iPinAmount = Integer.parseInt(lcfStringList.get(0));
-        int oPinAmount = 1;
         int circuitsAmount = Integer.parseInt(lcfStringList.get(1));
 
         for(int i=0; i<iPinAmount; i++){
             this.iPins.add(new IPin());
-        }
-
-        for(int i=0; i<oPinAmount; i++){
-            this.oPins.add(new OPin());
         }
 
         for(int i=0; i<circuitsAmount; i++){
@@ -226,7 +241,8 @@ public class LogicSimulator
 
         for(int i=0; i<circuitsAmount; i++){
             if(oPinGateNum[i]) {
-                this.oPins.get(0).addInputPin(this.circuits.get(i));
+                this.oPins.add(new OPin());
+                this.oPins.get(this.oPins.size()-1).addInputPin(this.circuits.get(i));
             }
         }
     }
