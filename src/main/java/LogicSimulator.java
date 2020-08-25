@@ -32,6 +32,8 @@ public class LogicSimulator
         return this.circuits;
     }
 
+    public List<String> getLcfStringList(){return this.lcfStringList;}
+
     public Boolean load(String filePath){
         boolean loadResult = false;
 

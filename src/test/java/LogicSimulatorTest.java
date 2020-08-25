@@ -11,8 +11,6 @@ public class LogicSimulatorTest
 {
     String file1Path;
     String file2Path;
-    String file1Data;
-    String file2Data;
     String wrongData;
 
     @Before
@@ -20,18 +18,7 @@ public class LogicSimulatorTest
     {
         file1Path = "src/File1.lcf";
         file2Path = "src/File2.lcf";
-        file1Data = "3\n" +
-                    "3\n" +
-                    "1 -1 2.1 3.1 0\n" +
-                    "3 -2 0\n" +
-                    "2 2.1 -3 0";
-        file2Data = "3\n" +
-                "5\n" +
-                "1 -1 2.1 3.1 0\n" +
-                "3 -2 0\n" +
-                "2 2.1 -3 0\n" +
-                "1 -1 2.1 3.1 0\n" +
-                "3 4.1 0";
+
         wrongData = "2\n" +
                 "3\n" +
                 "1 -1 2.1 3.1 0\n" +
@@ -64,12 +51,13 @@ public class LogicSimulatorTest
     {
         LogicSimulator logicSimulator = new LogicSimulator();
 
-        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
+        logicSimulator.load(file1Path);
+
+        List<String> lcfStringList = logicSimulator.getLcfStringList();
 
         logicSimulator.constructDevice(lcfStringList);
 
         assertEquals(3, logicSimulator.getiPins().size());
-        assertEquals(1, logicSimulator.getoPins().size());
         assertEquals(3, logicSimulator.getCircuits().size());
     }
 
@@ -78,7 +66,9 @@ public class LogicSimulatorTest
     {
         LogicSimulator logicSimulator = new LogicSimulator();
 
-        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
+        logicSimulator.load(file1Path);
+
+        List<String> lcfStringList = logicSimulator.getLcfStringList();
 
         logicSimulator.constructDevice(lcfStringList);
 
@@ -95,7 +85,9 @@ public class LogicSimulatorTest
     {
         LogicSimulator logicSimulator = new LogicSimulator();
 
-        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
+        logicSimulator.load(file1Path);
+
+        List<String> lcfStringList = logicSimulator.getLcfStringList();
 
         logicSimulator.constructDevice(lcfStringList);
 
@@ -120,7 +112,9 @@ public class LogicSimulatorTest
 
         //test1
 
-        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
+        logicSimulator.load(file1Path);
+
+        List<String> lcfStringList = logicSimulator.getLcfStringList();
 
         logicSimulator.constructDevice(lcfStringList);
 
@@ -143,7 +137,9 @@ public class LogicSimulatorTest
 
         //test2
 
-        lcfStringList = new ArrayList<String>(Arrays.asList(file2Data.split("\\n")));
+        logicSimulator.load(file2Path);
+
+        lcfStringList = logicSimulator.getLcfStringList();
 
         logicSimulator.constructDevice(lcfStringList);
 
@@ -169,7 +165,9 @@ public class LogicSimulatorTest
         //current
         LogicSimulator logicSimulator = new LogicSimulator();
 
-        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
+        logicSimulator.load(file1Path);
+
+        List<String> lcfStringList = logicSimulator.getLcfStringList();
 
         assertEquals(true, logicSimulator.detectLcfFormat(lcfStringList));
 
@@ -184,7 +182,9 @@ public class LogicSimulatorTest
     {
         LogicSimulator logicSimulator = new LogicSimulator();
 
-        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
+        logicSimulator.load(file1Path);
+
+        List<String> lcfStringList = logicSimulator.getLcfStringList();
 
         logicSimulator.constructDevice(lcfStringList);
 
