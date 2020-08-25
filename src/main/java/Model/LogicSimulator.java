@@ -1,3 +1,5 @@
+package Model;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -32,6 +34,10 @@ public class LogicSimulator
         return this.circuits;
     }
 
+    public boolean getSimulatorExist(){
+        return this.simulatorExist;
+    }
+
     public List<String> getLcfStringList(){return this.lcfStringList;}
 
     public Boolean load(String filePath){
@@ -43,12 +49,18 @@ public class LogicSimulator
 
             if(this.simulatorExist) {
                 clearSimulator();
+            } else {
+                this.simulatorExist = true;
             }
 
             while (scanner.hasNextLine()) {
                 this.lcfStringList.add(scanner.nextLine());
             }
             scanner.close();
+
+            constructDevice(this.lcfStringList);
+
+            connectDevice(this.lcfStringList);
 
             loadResult = true;
         } catch (FileNotFoundException e) {
@@ -71,7 +83,7 @@ public class LogicSimulator
     }
 
     public String getTruthTable(){
-        String truthTable = "";
+        String truthTable;
 
         int binarySize = this.iPins.size();
         int binaryAmount = (int) Math.pow(2,binarySize);

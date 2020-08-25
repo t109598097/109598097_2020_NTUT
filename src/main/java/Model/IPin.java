@@ -1,4 +1,4 @@
-import java.util.Vector;
+package Model;
 
 public class IPin extends Device
 {

@@ -1,4 +1,6 @@
-public class OPin extends Device
+package Model;
+
+public class GateNOT extends Device
 {
     @Override
     public void addInputPin(Device IPin)
@@ -9,6 +11,6 @@ public class OPin extends Device
     @Override
     public boolean getOutput()
     {
-        return this.iPins.get(0).getOutput();
+        return !this.iPins.get(0).getOutput();
     }
 }

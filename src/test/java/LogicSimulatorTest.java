@@ -1,10 +1,8 @@
+import Model.LogicSimulator;
 import org.junit.*;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.*;
 
-import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 public class LogicSimulatorTest
@@ -53,10 +51,6 @@ public class LogicSimulatorTest
 
         logicSimulator.load(file1Path);
 
-        List<String> lcfStringList = logicSimulator.getLcfStringList();
-
-        logicSimulator.constructDevice(lcfStringList);
-
         assertEquals(3, logicSimulator.getiPins().size());
         assertEquals(3, logicSimulator.getCircuits().size());
     }
@@ -68,16 +62,10 @@ public class LogicSimulatorTest
 
         logicSimulator.load(file1Path);
 
-        List<String> lcfStringList = logicSimulator.getLcfStringList();
-
-        logicSimulator.constructDevice(lcfStringList);
-
-        logicSimulator.connectDevice(lcfStringList);
-
-        assertEquals(3, logicSimulator.getCircuits().get(0).iPins.size());
-        assertEquals(1, logicSimulator.getCircuits().get(1).iPins.size());
-        assertEquals(2, logicSimulator.getCircuits().get(2).iPins.size());
-        assertEquals(1, logicSimulator.getoPins().get(0).iPins.size());
+        assertEquals(3, logicSimulator.getCircuits().get(0).getIPinsSize());
+        assertEquals(1, logicSimulator.getCircuits().get(1).getIPinsSize());
+        assertEquals(2, logicSimulator.getCircuits().get(2).getIPinsSize());
+        assertEquals(1, logicSimulator.getoPins().get(0).getIPinsSize());
     }
 
     @Test
@@ -86,12 +74,6 @@ public class LogicSimulatorTest
         LogicSimulator logicSimulator = new LogicSimulator();
 
         logicSimulator.load(file1Path);
-
-        List<String> lcfStringList = logicSimulator.getLcfStringList();
-
-        logicSimulator.constructDevice(lcfStringList);
-
-        logicSimulator.connectDevice(lcfStringList);
 
         Vector<Boolean> inputValues = new Vector<>();
         inputValues.add(false);
@@ -114,12 +96,6 @@ public class LogicSimulatorTest
 
         logicSimulator.load(file1Path);
 
-        List<String> lcfStringList = logicSimulator.getLcfStringList();
-
-        logicSimulator.constructDevice(lcfStringList);
-
-        logicSimulator.connectDevice(lcfStringList);
-
         assertEquals("Truth table:\n" +
                 "i i i | o\n" +
                 "1 2 3 | 1\n" +
@@ -138,12 +114,6 @@ public class LogicSimulatorTest
         //test2
 
         logicSimulator.load(file2Path);
-
-        lcfStringList = logicSimulator.getLcfStringList();
-
-        logicSimulator.constructDevice(lcfStringList);
-
-        logicSimulator.connectDevice(lcfStringList);
 
         assertEquals("Truth table:\n" +
                 "i i i | o o\n" +
@@ -183,12 +153,6 @@ public class LogicSimulatorTest
         LogicSimulator logicSimulator = new LogicSimulator();
 
         logicSimulator.load(file1Path);
-
-        List<String> lcfStringList = logicSimulator.getLcfStringList();
-
-        logicSimulator.constructDevice(lcfStringList);
-
-        logicSimulator.connectDevice(lcfStringList);
 
         logicSimulator.clearSimulator();
 

@@ -1,3 +1,5 @@
+package Model;
+
 import java.util.Vector;
 
 public class Device {
@@ -22,5 +24,9 @@ public class Device {
     public boolean getOutput()
     {
         throw new RuntimeException("This is not allowed to getOutput");
+    }
+
+    public int getIPinsSize() {
+        return this.iPins.size();
     }
 }
