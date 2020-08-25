@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="707d8626-ba36-4ff0-a855-3986f0200681" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/109OrientationCourse_Object-Oriented_Programming.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/109OrientationCourse_Object-Oriented_Programming_main.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/109OrientationCourse_Object-Oriented_Programming_test.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hw1.drawio.drawio" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Device.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GateAND.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GateNOT.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/GateOR.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/IPin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/LogicSimulator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/OPin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/main.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/test.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/LogicSimulator.class" afterPath="$PROJECT_DIR$/out/production/classes/LogicSimulator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/LogicSimulatorTest.class" afterPath="$PROJECT_DIR$/out/test/classes/LogicSimulatorTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/DeviceTest.java" afterPath="$PROJECT_DIR$/src/test/java/DeviceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/LogicSimulator.java" afterPath="$PROJECT_DIR$/src/main/java/LogicSimulator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/LogicSimulatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/LogicSimulatorTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -47,17 +25,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LogicSimulatorTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LogicSimulatorTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/LogicSimulatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-1240">
+              <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+              <folding>
+                <element signature="e#1398#1406#0" expanded="true" />
+                <element signature="e#1856#1864#0" expanded="true" />
+                <element signature="e#2491#2499#0" expanded="true" />
+                <element signature="e#3195#3203#0" expanded="true" />
+                <element signature="e#3971#3979#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.iml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DeviceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/DeviceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1059">
+              <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Device.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Device.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="17" />
+              <folding>
+                <element signature="e#438#439#0" expanded="true" />
+                <element signature="e#516#517#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.iml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/test.iml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -70,11 +79,78 @@
       <file leaf-file-name="LogicSimulator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/LogicSimulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+            <state relative-caret-position="285">
+              <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#547#548#0" expanded="true" />
+                <element signature="e#580#581#0" expanded="true" />
+                <element signature="e#622#623#0" expanded="true" />
+                <element signature="e#658#659#0" expanded="true" />
+                <element signature="e#5677#5685#0" expanded="true" />
+                <element signature="e#7363#7371#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OPin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/OPin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+              <folding>
+                <element signature="e#182#183#0" expanded="true" />
+                <element signature="e#234#235#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IPin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/IPin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <folding>
+                <element signature="e#241#242#0" expanded="true" />
+                <element signature="e#274#275#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GateOR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GateOR.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GateNOT.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GateNOT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <folding>
+                <element signature="e#185#186#0" expanded="true" />
+                <element signature="e#238#239#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GateAND.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GateAND.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,9 +167,17 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>myObj</find>
+      <find>circuitInfo</find>
+      <find>circuitIPinsInfo.get(circuitIPinsNum)</find>
+      <find>stringBuildersimulationResult</find>
+      <find>inputValues.size()</find>
+      <find>setTruthTableHead</find>
+      <find>lcfStringList</find>
     </findStrings>
     <replaceStrings>
       <replace>file</replace>
+      <replace>iPinString</replace>
+      <replace>size</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -563,27 +647,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LogicSimulatorTest">
-    <configuration name="DeviceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="109OrientationCourse_Object-Oriented_Programming_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DeviceTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
+  <component name="RunManager" selected="JUnit.LogicSimulatorTest.testDetectLcfFormat">
     <configuration name="LogicSimulatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="109OrientationCourse_Object-Oriented_Programming_test" />
@@ -604,14 +668,34 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="LogicSimulatorTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LogicSimulatorTest.testConnectDevice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="109OrientationCourse_Object-Oriented_Programming_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LogicSimulatorTest" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="METHOD_NAME" value="testConnectDevice" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="LogicSimulatorTest.testDetectLcfFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="109OrientationCourse_Object-Oriented_Programming_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LogicSimulatorTest" />
+      <option name="METHOD_NAME" value="testDetectLcfFormat" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -644,14 +728,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="LogicSimulatorTest.testLoad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LogicSimulatorTest.testGetTruthTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="109OrientationCourse_Object-Oriented_Programming_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LogicSimulatorTest" />
-      <option name="METHOD_NAME" value="testLoad" />
+      <option name="METHOD_NAME" value="testGetTruthTable" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -745,19 +829,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.DeviceTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.test" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.testConnectDevice" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.testGetSimulationResult" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.testGetSimulationResult" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.testLoad" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.testGetTruthTable" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.testDetectLcfFormat" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.testLoad" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.testGetSimulationResult" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DeviceTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.test" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.testDetectLcfFormat" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.testGetTruthTable" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.testGetSimulationResult" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LogicSimulatorTest.testConnectDevice" />
       </list>
     </recent_temporary>
   </component>
@@ -774,44 +858,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598249061381</updated>
-      <workItem from="1598249062710" duration="8772000" />
+      <workItem from="1598249062710" duration="30070000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LogicSimulatorTest - 2020.08.24 at 16h 42m 26s.xml">
+    <history-entry file="LogicSimulatorTest - 2020.08.25 at 10h 13m 39s.xml">
       <configuration name="LogicSimulatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LogicSimulatorTest - 2020.08.24 at 16h 43m 18s.xml">
-      <configuration name="LogicSimulatorTest" configurationId="JUnit" />
+    <history-entry file="LogicSimulatorTest_testDetectLcfFormat - 2020.08.25 at 10h 32m 58s.xml">
+      <configuration name="LogicSimulatorTest.testDetectLcfFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LogicSimulatorTest - 2020.08.24 at 16h 44m 02s.xml">
-      <configuration name="LogicSimulatorTest" configurationId="JUnit" />
+    <history-entry file="LogicSimulatorTest_testDetectLcfFormat - 2020.08.25 at 10h 35m 20s.xml">
+      <configuration name="LogicSimulatorTest.testDetectLcfFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LogicSimulatorTest - 2020.08.24 at 16h 44m 20s.xml">
-      <configuration name="LogicSimulatorTest" configurationId="JUnit" />
+    <history-entry file="LogicSimulatorTest_testDetectLcfFormat - 2020.08.25 at 10h 35m 39s.xml">
+      <configuration name="LogicSimulatorTest.testDetectLcfFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LogicSimulatorTest - 2020.08.24 at 16h 46m 44s.xml">
-      <configuration name="LogicSimulatorTest" configurationId="JUnit" />
+    <history-entry file="LogicSimulatorTest_testDetectLcfFormat - 2020.08.25 at 10h 39m 49s.xml">
+      <configuration name="LogicSimulatorTest.testDetectLcfFormat" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LogicSimulatorTest - 2020.08.24 at 16h 47m 16s.xml">
-      <configuration name="LogicSimulatorTest" configurationId="JUnit" />
+    <history-entry file="LogicSimulatorTest_testGetSimulationResult - 2020.08.25 at 10h 03m 38s.xml">
+      <configuration name="LogicSimulatorTest.testGetSimulationResult" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LogicSimulatorTest - 2020.08.24 at 16h 48m 26s.xml">
-      <configuration name="LogicSimulatorTest" configurationId="JUnit" />
+    <history-entry file="LogicSimulatorTest_testGetTruthTable - 2020.08.25 at 09h 53m 51s.xml">
+      <configuration name="LogicSimulatorTest.testGetTruthTable" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LogicSimulatorTest_testLoad - 2020.08.24 at 16h 08m 26s.xml">
-      <configuration name="LogicSimulatorTest.testLoad" configurationId="JUnit" />
+    <history-entry file="LogicSimulatorTest_testGetTruthTable - 2020.08.25 at 09h 54m 21s.xml">
+      <configuration name="LogicSimulatorTest.testGetTruthTable" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LogicSimulatorTest_testLoad - 2020.08.24 at 16h 09m 14s.xml">
-      <configuration name="LogicSimulatorTest.testLoad" configurationId="JUnit" />
+    <history-entry file="LogicSimulatorTest_testGetTruthTable - 2020.08.25 at 09h 55m 29s.xml">
+      <configuration name="LogicSimulatorTest.testGetTruthTable" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LogicSimulatorTest_testLoad - 2020.08.24 at 16h 21m 09s.xml">
-      <configuration name="LogicSimulatorTest.testLoad" configurationId="JUnit" />
+    <history-entry file="LogicSimulatorTest_testGetTruthTable - 2020.08.25 at 10h 13m 14s.xml">
+      <configuration name="LogicSimulatorTest.testGetTruthTable" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8772000" />
+    <option name="totallyTimeSpent" value="30070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -826,7 +910,7 @@
       <window_info id="TCPMON" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28659162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28659162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -856,7 +940,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -893,24 +977,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GateAND.java">
+    <entry file="file://$PROJECT_DIR$/src/test/test.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="e#98#99#0" expanded="true" />
-            <element signature="e#134#135#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GateOR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GateNOT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="135">
           <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
-            <element signature="e#97#98#0" expanded="true" />
-            <element signature="e#133#134#0" expanded="true" />
             <element signature="e#185#186#0" expanded="true" />
             <element signature="e#238#239#0" expanded="true" />
           </folding>
@@ -919,28 +1006,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Device.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="68" lean-forward="false" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+        <state relative-caret-position="210">
+          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="17" />
           <folding>
-            <element signature="e#110#111#0" expanded="true" />
-            <element signature="e#148#149#0" expanded="true" />
-            <element signature="e#196#197#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#400#401#0" expanded="true" />
             <element signature="e#438#439#0" expanded="true" />
             <element signature="e#516#517#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DeviceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/GateAND.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-217">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -952,14 +1031,6 @@
             <element signature="e#182#183#0" expanded="true" />
             <element signature="e#234#235#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GateOR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,8 +1047,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/LogicSimulator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        <state relative-caret-position="285">
+          <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#5677#5685#0" expanded="true" />
+            <element signature="e#7363#7371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/DeviceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1059">
+          <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -986,17 +1075,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/LogicSimulatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/test.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="-1240">
+          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <folding>
+            <element signature="e#1398#1406#0" expanded="true" />
+            <element signature="e#1856#1864#0" expanded="true" />
+            <element signature="e#2491#2499#0" expanded="true" />
+            <element signature="e#3195#3203#0" expanded="true" />
+            <element signature="e#3971#3979#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

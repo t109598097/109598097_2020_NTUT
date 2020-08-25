@@ -12,6 +12,7 @@ public class LogicSimulatorTest
     String file1Path;
     String file2Path;
     String file1Data;
+    String file2Data;
 
     @Before
     public void setUp()
@@ -23,6 +24,11 @@ public class LogicSimulatorTest
                     "1 -1 2.1 3.1 0\n" +
                     "3 -2 0\n" +
                     "2 2.1 -3 0";
+        file2Data = "2\n" +
+                "3\n" +
+                "1 -1 2.1 3.1 0\n" +
+                "3 -2 0\n" +
+                "2 2.1 -3 0";
     }
 
     @Test
@@ -81,7 +87,11 @@ public class LogicSimulatorTest
     {
         LogicSimulator logicSimulator = new LogicSimulator();
 
-        logicSimulator.load(file1Path);
+        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
+
+        logicSimulator.constructDevice(lcfStringList);
+
+        logicSimulator.connectDevice(lcfStringList);
 
         Vector<Boolean> inputValues = new Vector<>();
         inputValues.add(false);
@@ -100,7 +110,11 @@ public class LogicSimulatorTest
     {
         LogicSimulator logicSimulator = new LogicSimulator();
 
-        logicSimulator.load(file1Path);
+        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
+
+        logicSimulator.constructDevice(lcfStringList);
+
+        logicSimulator.connectDevice(lcfStringList);
 
         assertEquals("Truth table:\n" +
                 "i i i | o\n" +
@@ -114,5 +128,21 @@ public class LogicSimulatorTest
                 "1 0 1 | 1\n" +
                 "1 1 0 | 0\n" +
                 "1 1 1 | 0\n", logicSimulator.getTruthTable());
+    }
+
+    @Test
+    public void testDetectLcfFormat()
+    {
+        //current
+        LogicSimulator logicSimulator = new LogicSimulator();
+
+        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
+
+        assertEquals(true, logicSimulator.detectLcfFormat(lcfStringList));
+
+        //wrong
+        lcfStringList = new ArrayList<String>(Arrays.asList(file2Data.split("\\n")));
+
+        assertEquals(false, logicSimulator.detectLcfFormat(lcfStringList));
     }
 }
