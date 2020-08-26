@@ -10,6 +10,9 @@ public class LogicSimulatorTest
     String file1Path;
     String file2Path;
     String file3Path;
+    String file1Data;
+    String file2Data;
+    String file3Data;
 
     @Before
     public void setUp()
@@ -17,6 +20,23 @@ public class LogicSimulatorTest
         file1Path = "src/File1.lcf";
         file2Path = "src/File2.lcf";
         file3Path = "src/File3_wrong.lcf";
+        file1Data = "3\n" +
+                "3\n" +
+                "1 -1 2.1 3.1 0\n" +
+                "3 -2 0\n" +
+                "2 2.1 -3 0";
+        file2Data = "3\n" +
+                "5\n" +
+                "1 -1 2.1 3.1 0\n" +
+                "3 -2 0\n" +
+                "2 2.1 -3 0\n" +
+                "1 -1 2.1 3.1 0\n" +
+                "3 4.1 0";
+        file3Data = "3\n" +
+                "3\n" +
+                "4 -1 2.1 3.1 0\n" +
+                "3 -2 0\n" +
+                "2 2.1 -3 0";
     }
 
     @Test
@@ -130,16 +150,12 @@ public class LogicSimulatorTest
         //current
         LogicSimulator logicSimulator = new LogicSimulator();
 
-        logicSimulator.load(file1Path);
-
-        List<String> lcfStringList = logicSimulator.getLcfStringList();
+        List<String> lcfStringList = new ArrayList<String>(Arrays.asList(file1Data.split("\\n")));
 
         assertEquals(true, logicSimulator.detectLcfFormat(lcfStringList));
 
         //wrong
-        logicSimulator.load(file3Path);
-
-        lcfStringList = logicSimulator.getLcfStringList();
+        lcfStringList = new ArrayList<String>(Arrays.asList(file3Data.split("\\n")));
 
         assertEquals(false, logicSimulator.detectLcfFormat(lcfStringList));
     }
