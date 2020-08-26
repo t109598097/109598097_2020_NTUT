@@ -1,13 +1,10 @@
-import Controller.SimulatorController;
-import View.SimulatorView;
-
-import java.util.Scanner;
+import ViewAndController.TextUI;
 
 public class Main
 {
     public static void main(String args[])
     {
-        SimulatorController simulatorController = new SimulatorController();
-        simulatorController.processCommand();
+        TextUI controller = new TextUI();
+        controller.processCommand();
     }
 }

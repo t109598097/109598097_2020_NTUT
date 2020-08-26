@@ -9,19 +9,14 @@ public class LogicSimulatorTest
 {
     String file1Path;
     String file2Path;
-    String wrongData;
+    String file3Path;
 
     @Before
     public void setUp()
     {
         file1Path = "src/File1.lcf";
         file2Path = "src/File2.lcf";
-
-        wrongData = "2\n" +
-                "3\n" +
-                "1 -1 2.1 3.1 0\n" +
-                "3 -2 0\n" +
-                "2 2.1 -3 0";
+        file3Path = "src/File3_wrong.lcf";
     }
 
     @Test
@@ -142,7 +137,9 @@ public class LogicSimulatorTest
         assertEquals(true, logicSimulator.detectLcfFormat(lcfStringList));
 
         //wrong
-        lcfStringList = new ArrayList<String>(Arrays.asList(wrongData.split("\\n")));
+        logicSimulator.load(file3Path);
+
+        lcfStringList = logicSimulator.getLcfStringList();
 
         assertEquals(false, logicSimulator.detectLcfFormat(lcfStringList));
     }

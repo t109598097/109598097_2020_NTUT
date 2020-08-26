@@ -1,29 +1,35 @@
-package Controller;
+package ViewAndController;
 
 import Model.LogicSimulator;
-import View.SimulatorView;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.util.Scanner;
 import java.util.Vector;
 
-public class SimulatorController {
+public class TextUI {
 
-    private SimulatorView view;
     private LogicSimulator model;
 
-    public SimulatorController()
+    public TextUI()
     {
-        view = new SimulatorView();
         model = new LogicSimulator();
+    }
+
+    public void displayMenu(){
+        System.out.println("1. Load logic circuit file");
+        System.out.println("2. Simulation");
+        System.out.println("3. Display truth table");
+        System.out.println("4. Exit");
+        System.out.println("Command:");
     }
 
 
     public void processCommand(){
         Scanner sc = new Scanner(System.in);
-        String command = "0";
-        while(!command.equals("4")){
-            view.displayMenu();
+        String command;
+        boolean isQuit = false;
+
+        while(!isQuit){
+            displayMenu();
             command = sc.nextLine();
 
             switch(command){
@@ -32,7 +38,7 @@ public class SimulatorController {
                     command = sc.nextLine();
                     if(this.model.load(command)) {
                         System.out.format(
-                                "Circuit: %d input pins, %d output pins and %d gates"
+                                "Circuit: %d input pins, %d output pins and %d gates\n"
                                 ,this.model.getiPins().size()
                                 ,this.model.getoPins().size()
                                 ,this.model.getCircuits().size());
@@ -70,6 +76,7 @@ public class SimulatorController {
 
                 case "4":
                     System.out.println("Goodbye, thanks for using LS.");
+                    isQuit = true;
                     break;
 
                 default:

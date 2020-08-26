@@ -47,26 +47,29 @@ public class LogicSimulator
             File lcf = new File(filePath);
             Scanner scanner = new Scanner(lcf);
 
-            if(this.simulatorExist) {
-                clearSimulator();
-            } else {
-                this.simulatorExist = true;
-            }
-
             while (scanner.hasNextLine()) {
                 this.lcfStringList.add(scanner.nextLine());
             }
             scanner.close();
 
-            constructDevice(this.lcfStringList);
+            if(detectLcfFormat(this.lcfStringList)) {
+                if(this.simulatorExist) {
+                    clearSimulator();
+                }
 
-            connectDevice(this.lcfStringList);
+                constructDevice(this.lcfStringList);
 
-            loadResult = true;
+                connectDevice(this.lcfStringList);
+
+                this.simulatorExist = true;
+
+                loadResult = true;
+            }
         } catch (FileNotFoundException e) {
 //            e.printStackTrace();
         }
 
+        this.lcfStringList.clear();
         return loadResult;
     }
 
@@ -264,22 +267,35 @@ public class LogicSimulator
     public boolean detectLcfFormat(List<String> lcfData) {
         String iPinsAmount = lcfData.get(0);
         String gatesAmount = lcfData.get(1);
-        int iPinsCount = 0;
+//        int iPinsCount = 0;
 
-        if(!isPositiveInteger(iPinsAmount)) return false;
-        if(!isPositiveInteger(gatesAmount)) return false;
+        if(!isPositiveInteger(iPinsAmount)) {
+            System.out.println("iPinsAmount error");
+            return false;
+        }
+        if(!isPositiveInteger(gatesAmount)) {
+            System.out.println("gatesAmount error");
+            return false;
+        }
         //檢查設定gate數量與輸入數量是否一致
-        if(lcfData.size()-2 != Integer.parseInt(gatesAmount)) return false;
+        if(lcfData.size()-2 != Integer.parseInt(gatesAmount)) {
+            System.out.println("設定gate數量與輸入數量是不一致");
+            return false;
+        }
 
         for(int i=2; i<lcfData.size(); i++){
-            List<String> cricuitInfo = new LinkedList<String>(Arrays.asList(lcfData.get(i).split(" ")));
+            List<String> cricuitInfo = new ArrayList<>(Arrays.asList(lcfData.get(i).split(" ")));
             //gate type
             if(isPositiveInteger(cricuitInfo.get(0))){
                 int type = Integer.parseInt(cricuitInfo.get(0));
+
                 if(type<1 || type>3) {
+                    System.out.println("gate type error");
                     return false;
                 }
+
             } else {
+                System.out.println("gate type is not number");
                 return false;
             }
 
@@ -287,32 +303,50 @@ public class LogicSimulator
                 String cricuitIPin = cricuitInfo.get(j);
                 if(cricuitIPin.equals("0")) {
                     //end with 0
-                    if(j != cricuitInfo.size()-1) return false;
+                    if(j != cricuitInfo.size()-1) {
+                        System.out.println("0 is not EOF");
+                        return false;
+                    }
                 } else if(cricuitIPin.matches("^-\\d{1,2}$")) {
                     if(isPositiveInteger(cricuitIPin.substring(cricuitIPin.indexOf('-')+1))){
                         int num = Integer.parseInt(cricuitIPin.substring(cricuitIPin.indexOf('-')+1));
-                        if(num<1 || num>16) return false;
 
-                        iPinsCount++;
+                        if(num<1 || num>16) {
+                            System.out.println("cricuitIPin error with '-' ");
+                            return false;
+                        }
+
+//                        iPinsCount++;
                     }
                     else {
+                        System.out.println("cricuitIPin is not number");
                         return false;
                     }
                 } else if(cricuitIPin.matches("^\\d{1,4}\\.1$")) {
                     if(isPositiveInteger(cricuitIPin.substring(0, cricuitIPin.indexOf('.')))){
                         int num = Integer.parseInt(cricuitIPin.substring(0, cricuitIPin.indexOf('.')));
-                        if(num<1 || num>1000) return false;
+
+                        if(num<1 || num>1000) {
+                            System.out.println("cricuitIPin error with '.' ");
+                            System.out.println("cricuitIPin error");
+                            return false;
+                        }
                     }
                     else {
+                        System.out.println("cricuitIPin is not number");
                         return false;
                     }
                 } else {
+                    System.out.println("cricuitIPin error");
                     return false;
                 }
             }
         }
 
-        if(iPinsCount!=Integer.parseInt(iPinsAmount)) return false;
+//        if(iPinsCount!=Integer.parseInt(iPinsAmount)) {
+//            System.out.println("iPinsCount != iPinsAmount");
+//            return false;
+//        }
 
         return true;
     }
